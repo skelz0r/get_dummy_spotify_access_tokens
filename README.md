@@ -14,3 +14,7 @@ bundle install
 ```
 
 Check `.env.example`
+
+## Prod
+
+https://get-dummy-spotify-access-token.herokuapp.com/
