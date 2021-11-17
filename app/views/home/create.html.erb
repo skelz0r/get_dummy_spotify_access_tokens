@@ -5,17 +5,24 @@
 <p>
   You can use the following code to manipulate the user resource:
 
-<code>user = RSpotify::User.new(
-  credentials: {
-    expires: true,
-    expires_at: <%= @spotify_user.credentials['expires_at'] %>,
-    refresh_token: '<%= @spotify_user.credentials['refresh_token'] %>',
-    token: '<%= @spotify_user.credentials['token'] %>',
+<code>spotify_id = '<%= ENV['SPOTIFY_CLIENT_ID'] %>'
+spotify_secret = '<%= ENV['SPOTIFY_CLIENT_SECRET'] %>'
+
+RSpotify::authenticate(spotify_id, spotify_secret)
+
+user = RSpotify::User.new(
+  'id' => '<%= @spotify_user.id %>',
+  'credentials' => {
+    'expires' => true,
+    'expires_at' => <%= @spotify_user.credentials['expires_at'] %>,
+    'refresh_token' => '<%= @spotify_user.credentials['refresh_token'] %>',
+    'token' => '<%= @spotify_user.credentials['token'] %>',
   }
 )</code>
+<br />
+Don't forget to configure your app with spotify_id and spotify_secret defined above, otherwise it won't work
 </p>
 
-<p>
-DEBUG
-
+<div style="display:none;">
 <%= @spotify_user.to_hash %>
+</div>
