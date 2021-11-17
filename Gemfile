@@ -6,7 +6,7 @@ ruby "3.0.2"
 gem "rails", "~> 7.0.0.alpha2"
 gem "puma", "~> 5.0"
 gem "importmap-rails", ">= 0.3.4"
-gem "turbo-rails", ">= 0.7.11"
+gem "turbo-rails", "~> 0.7"
 gem "stimulus-rails", ">= 0.4.0"
 gem "redis", "~> 4.0"
 gem "bootsnap", ">= 1.4.4", require: false
