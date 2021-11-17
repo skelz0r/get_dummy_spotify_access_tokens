@@ -247,6 +247,7 @@ DEPENDENCIES
   debug (>= 1.0.0)
   dotenv-rails
   importmap-rails (>= 0.3.4)
+  omniauth
   puma (~> 5.0)
   rails (~> 7.0.0.alpha2)
   redis (~> 4.0)

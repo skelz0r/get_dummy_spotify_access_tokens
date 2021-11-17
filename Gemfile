@@ -12,6 +12,7 @@ gem "redis", "~> 4.0"
 gem "bootsnap", ">= 1.4.4", require: false
 
 gem "rspotify"
+gem "omniauth"
 
 group :development, :test do
   gem "debug", ">= 1.0.0", platforms: %i[ mri mingw x64_mingw ]
