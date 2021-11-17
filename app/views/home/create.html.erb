@@ -1,0 +1,23 @@
+<h1>
+  It works!
+</h1>
+
+<p>
+  You can use the following code to manipulate the user resource:
+
+<code>
+user = RSpotify::User.new(
+  credentials: {
+    expires: true,
+    expires_at: <%= @spotify_user.credentials['expires_at'] %>,
+    refresh_token: '<%= @spotify_user.credentials['refresh_token'] %>',
+    token: '<%= @spotify_user.credentials['token'] %>',
+  }
+)
+</code>
+</p>
+
+<p>
+DEBUG
+
+<%= @spotify_user.to_hash %>
